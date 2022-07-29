@@ -30,10 +30,9 @@ metadata:
     service.beta.kubernetes.io/aws-load-balancer-type: "true"
 spec:
   ports:
-  - name: http
-    port: 5000
-    protocol: TCP
-    targetPort: 5000
+  - nodePort: 30163
+    port: 8080 
+    targetPort: 80
   selector:
     app: hello
-  type: LoadBalancer
+  type: NodePort
