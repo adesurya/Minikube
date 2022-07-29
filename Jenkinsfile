@@ -11,7 +11,7 @@ node {
     stage('Build Docker Image') {
       // build docker image
       //unstash 'targetfiles'
-      bat "docker build -t helloworldkube ."
+      bat "docker build -t adesurya/helloworldkube ."
       bat "docker login -u adesurya -p IkanCupang1!"
       bat "docker push adesurya/helloworldminikube:latest"
     }
